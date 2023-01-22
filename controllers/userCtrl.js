@@ -1,4 +1,4 @@
- const Users = require("../models/userModel");
+const Users = require("../models/UserModel");
 
 // const Payments = require('../models/paymentModel')
 const bcrypt = require("bcrypt");
@@ -12,8 +12,8 @@ const userCtrl = {
       const user = await Users.findOne({ email });
       if (user)
         return res.status(400).json({ err: "The email already exists." });
-      
-       if (password.length < 6)
+
+      if (password.length < 6)
         return res
           .status(400)
           .json({ err: "Password is at least 6 characters Long." });

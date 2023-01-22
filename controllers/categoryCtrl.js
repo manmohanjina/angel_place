@@ -1,4 +1,4 @@
-const Category = require("../models/categoryModel");
+const Category = require("../models/CategoryModel");
 const Products = require("../models/Product.Model");
 
 const categoryCtrl = {
