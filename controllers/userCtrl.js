@@ -82,7 +82,7 @@ const userCtrl = {
       if (!rf_token)
         return res.status(400).json({ msg: "Please Login or Register" });
 
-      jwt.verify(rf_token, process.env.REFRESH_TOKEN_SECRET, (err, user) => {
+      jwt.verify(rf_token, process.env.REFRESHTOKENSECRET, (err, user) => {
         if (err)
           return res.status(400).json({ msg: "Please Login or Register" });
 
@@ -132,10 +132,10 @@ const userCtrl = {
 };
 
 const createAccessToken = (user) => {
-  return jwt.sign(user, process.env.ACCESS_TOKEN_SECRET, { expiresIn: "1d" });
+  return jwt.sign(user, process.env.ACCESSTOKENSECRET, { expiresIn: "1d" });
 };
 const createRefreshToken = (user) => {
-  return jwt.sign(user, process.env.REFRESH_TOKEN_SECRET, { expiresIn: "7d" });
+  return jwt.sign(user, process.env.REFRESHTOKENSECRET, { expiresIn: "7d" });
 };
 
 module.exports = userCtrl;
