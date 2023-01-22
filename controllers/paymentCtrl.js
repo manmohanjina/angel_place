@@ -1,6 +1,6 @@
 const Payments = require("../models/paymentModel");
 const Users = require("../models/userModel");
-const Products = require("../Models/Product.Model");
+const Products = require("../models/Product.Model");
 
 const paymentCtrl = {
   getPayments: async (req, res) => {

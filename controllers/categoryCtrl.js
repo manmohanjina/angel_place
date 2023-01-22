@@ -1,5 +1,5 @@
 const Category = require("../models/categoryModel");
-const Products = require("../Models/Product.Model");
+const Products = require("../models/Product.Model");
 
 const categoryCtrl = {
   getCategories: async (req, res) => {
